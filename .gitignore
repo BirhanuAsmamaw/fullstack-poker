@@ -1,0 +1,126 @@
+# Frontend dependencies
+frontend/node_modules
+frontend/.pnp
+frontend/.pnp.*
+frontend/.yarn/*
+frontend/!.yarn/patches
+frontend/!.yarn/plugins
+frontend/!.yarn/releases
+frontend/!.yarn/versions
+
+# testing
+frontend/coverage
+
+# next.js
+frontend/.next/
+frontend/out/
+
+# production
+frontend/build
+
+# misc
+frontend/.DS_Store
+frontend/*.pem
+
+# debug
+frontend/npm-debug.log*
+frontend/yarn-debug.log*
+frontend/yarn-error.log*
+frontend/.pnpm-debug.log*
+
+# env files (can opt-in for committing if needed)
+.env*
+
+# vercel
+frontend/.vercel
+
+# typescript
+frontend/*.tsbuildinfo
+frontend/next-env.d.ts
+
+
+# backend dependencies
+
+# Python
+backend/__pycache__/
+backend/**/*.py[cod]
+backend/**/*.pyo
+backend/**/__pycache__/
+backend/*.pyc
+backend/*.pyo
+
+# Virtual environments
+venv/
+.env/
+.env.bak/
+.envrc
+
+# FastAPI + Uvicorn logs
+backend/*.log
+backend/logs/
+backend/*.db
+
+# IDE/editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS-generated files
+.DS_Store
+Thumbs.db
+
+# Pytest cache
+backend/.pytest_cache/
+backend/.coverage
+backend/htmlcov/
+
+# MyPy
+backend/.mypy_cache/
+backend/.dmypy.json
+backend/dmypy.json
+
+# Pydantic cache (if any)
+backend/__pydantic__/
+
+# Build/dist artifacts
+backend/build/
+backend/dist/
+backend/*.egg-info/
+backend/*.eggs/
+
+# Coverage reports
+backend/coverage.xml
+backend/coverage/
+
+# SQLite or test databases
+backend/*.sqlite3
+backend/*.db
+
+# Local settings or secrets
+backend/.env
+backend/.secrets/
+
+# Jupyter (if used)
+backend/*.ipynb_checkpoints
+
+# Docker
+backend/__pycache__/
+backend/*.pid
+backend/*.sock
+backend/tmp/
+
+# Celery (if used)
+backend/celerybeat-schedule
+backend/*.pid
+
+# Static and media files (if dynamically generated)
+backend/staticfiles/
+backend/mediafiles/
+
+# Uvicorn reload artifacts
+backend/.reload/
+
+# Other tools (e.g., Alembic migrations)
+backend/migrations/__pycache__/
+backend/migrations/versions/*.pyc
