@@ -26,7 +26,7 @@ export default function HandHistoryContainer() {
 
   return (
     <div className="flex-1 p-4">
-      <div className="bg-gray-100 p-4 rounded-lg shadow-inner h-96 overflow-y-auto whitespace-pre-wrap text-sm">
+      <div className="bg-gray-100 p-4 rounded-lg shadow-inner max-h-screen overflow-y-scroll whitespace-pre-wrap text-sm">
         <h2 className="text-xl font-semibold mb-4">Hand history</h2>
         {loading ? (
           <p>Loading hand history...</p>
