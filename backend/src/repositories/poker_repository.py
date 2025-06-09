@@ -7,6 +7,22 @@ from src.db.dataclass import PokerHand
 class PokerHandRepository:
     def __init__(self, conn):
         self.conn = conn
+        self.ensure_table_exists()  # Automatically create table if it doesn't exist
+
+    def ensure_table_exists(self):
+        with self.conn.cursor() as cur:
+            cur.execute("""
+                CREATE TABLE IF NOT EXISTS poker_hands (
+                    hand_id UUID PRIMARY KEY,
+                    winnings INTEGER[],
+                    stack_size INTEGER NOT NULL,
+                    dealer INTEGER NOT NULL,
+                    actions TEXT[],
+                    player_hands TEXT[],
+                    created_at TIMESTAMPTZ DEFAULT CURRENT_TIMESTAMP
+                );
+            """)
+            self.conn.commit()
 
     def save(self, hand: PokerHand) -> PokerHand:
         with self.conn.cursor() as cur:
